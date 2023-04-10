@@ -1,9 +1,11 @@
 Competition overall: 
 - Choropleth Map: number of victories
 - Line chart: country’s debut in the competition and the number of participants
+finals_processed
+x Column histogram: average placement by country
+song_data_processed
 
-Since 2009
-- Column histogram: average placement by country
+Since 2009:
 x Pie chart: average points (in percentages) in the final by year
 - Scatterplot: final and nonqualified numbers by country 
 - Scatterplot: running order number in the semi-finals and number of qualifications
@@ -15,8 +17,10 @@ x Pie chart: style of the song by country and year (in percentages)
 - Column histogram: key distribution by year and country
 - Line and column histogram: tempo (BPM) distribution by year and country
 - Line and column histogram: age distribution by year and country
+song_data_processed
 
 Since 2016:
 - Scatterplot: televote and jury points (in percentages) in the final by country
 - Scatterplot: Eurovisionworld poll results and points in the final (in percentages)
 - Scatterplot: OGAE poll results and points in the final (in percentages)
+points_,eurovisionworld_polls,ogae_polls
