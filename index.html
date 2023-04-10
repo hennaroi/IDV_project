@@ -2,15 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Plotly and fun </title>
+    <title>All about Eurosivion</title>
+    <style>
+        /* CSS styles for the <h1> tag */
+        h1 {
+            text-align: center; /* Align text to center */
+            margin-top: 10px; /* Add some space above the title */
+        }
+        /* CSS styles for the iframes */
+        .plot-container {
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+        }
+    </style>
 </head>
-
-<h1>Title and some content above plotly graph</h1>
-
-<div src="test.html"></div>
-
-<p>Other stuff below the plot</p>
 <body>
+    <h1>All about Eurovision</h1>
+
+    <p>Stuff above the plots</p>
+
+    <div class="plot-container">
+        <iframe src="gender_pie_year/gender_pie_year_2022.html" width="30%" height="300%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="gender_pie_country/gender_pie_country_Finland.html" width="30%" height="300%"></iframe>
+    </div>
+
+    <p>Other stuff below the plots</p>
 
 </body>
 </html>
