@@ -1,9 +1,9 @@
 Competition overall: 
-- Choropleth Map: number of victories
-- Line chart: country’s debut in the competition and the number of participants
-finals_processed
+x Choropleth Map: number of victories
+x Scatterplot: country’s debut in the competition and the number of participations
+x Column histogram: Number of participating countries each year
 x Column histogram: average placement by country
-song_data_processed
+finals_processed
 
 Since 2009:
 x Pie chart: average points (in percentages) in the final by year
@@ -11,17 +11,17 @@ x Scatterplot: final and nonqualified numbers by country
 x Column histogram: running order number in the semi-finals and number of qualifications
 x Column histogram: running order number in the final and the average placement
 x Column histogram: running order number in the final and number of victories
-- Column histogram: running order number in the final and number of points (in percentages)
-x Pie chart: language used by country and year (in percentages) and All
-x Pie chart: female / male as representative by country and year (in percentages)
-x Pie chart: style of the song by country and year (in percentages)
-- Column histogram: key distribution by year and country
-- Line and column histogram: tempo (BPM) distribution by year and country
-- Line and column histogram: age distribution by year and country
+x Column histogram: running order number in the final and number of points
+x Pie chart: language used by country and year
+x Pie chart: female / male as representative by country and year
+x Pie chart: style of the song by country and year
+x Pie chart: key distribution by year and country
+x Pie chart: tempo (BPM) distribution by year
+x Line chart: tempo (BPM) distribution by country and all time
 song_data_processed
 
 Since 2016:
-- Scatterplot: televote and jury points (in percentages) in the final by country
-- Scatterplot: Eurovisionworld poll results and points in the final (in percentages)
-- Scatterplot: OGAE poll results and points in the final (in percentages)
+x Scatterplot: televote and jury points (in percentages) in the final by country
+x Scatterplot: Eurovisionworld poll results and televoting points and total points in the final (in percentages)
+x Scatterplot: OGAE poll results and points in the final (in percentages)
 points_,eurovisionworld_polls,ogae_polls
