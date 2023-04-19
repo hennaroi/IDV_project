@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>All about Eurosivion</title>
+    <title>All about Eurovision</title>
     <style>
         /* CSS styles for the <h1> tag */
         h1 {
@@ -10,10 +10,17 @@
             margin-top: 10px; /* Add some space above the title */
         }
         /* CSS styles for the iframes */
+        /* CSS styles for the iframes */
         .plot-container {
-            width: 100%;
-            height: 100px;
-            display: inline;
+            width: 50%;
+            height: 400px;
+            box-sizing: border-box;
+            padding: 10px;
+            float: left; /* Float the container to the left */
+        }
+        /* Clear the float after the last container */
+        .clear {
+            clear: both;
         }
     </style>
 </head>
@@ -23,13 +30,84 @@
     <p>Information about the page</p>
 
     <div class="plot-container">
-        <iframe src="running_order_in_semi_and_qualifications_column_histogram.html" width="30%" height="300%"></iframe>
+        <iframe src="" width="100%" height="100%"></iframe>
     </div>
     <div class="plot-container">
-        <iframe src="numer_of_victories_map.html" width="30%" height="300%"></iframe>
+        <iframe src="numer_of_victories_map.html" width="100%" height="100%"></iframe>
     </div>
 
-    <p>Other stuff below the plots</p>
+    <div class="plot-container">
+        <iframe src="running_order_in_semi_and_qualifications_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="countrys_debut_and_numer_of_participations.html" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="plot-container">
+        <iframe src="running_order_and_average_placement_in_final_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="number_of_participating_countries.html" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="plot-container">
+        <iframe src="running_order_in_final_and_number_victories_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="final_points_and_times_scatter.html" width="100%" height="100%"></iframe>
+    </div>
+   
+    <div class="plot-container">
+        <iframe src="running_order_and_average_placement_in_final_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="jury_and_tele_points_scatter/jury_and_tele_points_scatter_2022.html" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="plot-container">
+        <iframe src="eurovisionworld_poll_and_tele_and_total_points_scatter/eurovisionworld_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="ogae_poll_and_tele_and_total_points_scatter/ogae_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
+    </div>
+    
+    <div>
+        <label for="year-select">Select Year:</label>
+        <select id="year-select">
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+        </select>
+    </div>
+    <div class="plot-container">
+        <iframe id="final-points-plot" src="final_points_pie_year/final_points_pie_year_2022.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="qualified_and_nonqualified_numbers_scatter.html" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="clear"></div> <!-- Clear the float after the last container -->
+
+    <script>
+        const select_finalpoints_pie_year = document.getElementById("year-select");
+        const finalpoints_pie_year = document.getElementById("final-points-plot");
+
+        select_finalpoints_pie_year.addEventListener("change", () => {
+            const selectedYear = select_finalpoints_pie_year.value;
+            finalpoints_pie_year.src = `final_points_pie_year/final_points_pie_year_${selectedYear}.html`;
+        });
+    </script>
 
 </body>
 </html>
