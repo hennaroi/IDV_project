@@ -25,58 +25,63 @@
     </style>
 </head>
 <body>
+
     <h1>All about Eurovision</h1>
 
-    <p>Information about the page</p>
+    <p>The Eurovision Song Contest is an annual international music competition, which has been held since 1956. It is one of the longest-running television programs in the world and is watched by millions of people across Europe and beyond.</p>
+
+    <p>Each participating country submits an original song, which is performed live during the competition. After all the performances, viewers in each country cast their votes for their favourite songs, and a winner is determined. The winning country then hosts the next year's competition.</p>
+
+    <p>The contest has launched the careers of many successful artists, including ABBA, Celine Dion, and Julio Iglesias. It has also become known for its flamboyant costumes, elaborate stage productions, and occasional political controversy.</p>
+
+    <p>This page contains information about the contest thorough the years, especially since 2009 and 2016.</p>
 
     <div class="plot-container">
-        <iframe src="" width="100%" height="100%"></iframe>
+        <iframe src="logo.png" width="100%" height="100%"></iframe>
     </div>
     <div class="plot-container">
         <iframe src="numer_of_victories_map.html" width="100%" height="100%"></iframe>
     </div>
 
-    <div class="plot-container">
-        <iframe src="running_order_in_semi_and_qualifications_column_histogram.html" width="100%" height="100%"></iframe>
-    </div>
-    <div class="plot-container">
-        <iframe src="countrys_debut_and_numer_of_participations.html" width="100%" height="100%"></iframe>
-    </div>
-
-    <div class="plot-container">
-        <iframe src="running_order_and_average_placement_in_final_column_histogram.html" width="100%" height="100%"></iframe>
-    </div>
-    <div class="plot-container">
-        <iframe src="number_of_participating_countries.html" width="100%" height="100%"></iframe>
-    </div>
 
     <div class="plot-container">
         <iframe src="running_order_in_final_and_number_victories_column_histogram.html" width="100%" height="100%"></iframe>
     </div>
     <div class="plot-container">
-        <iframe src="final_points_and_times_scatter.html" width="100%" height="100%"></iframe>
+        <iframe src="number_of_participating_countries.html" width="100%" height="100%"></iframe>
     </div>
-   
+    
+
     <div class="plot-container">
         <iframe src="running_order_and_average_placement_in_final_column_histogram.html" width="100%" height="100%"></iframe>
     </div>
     <div class="plot-container">
-        <iframe src="jury_and_tele_points_scatter/jury_and_tele_points_scatter_2022.html" width="100%" height="100%"></iframe>
-    </div>
-
-    <div class="plot-container">
-        <iframe src="eurovisionworld_poll_and_tele_and_total_points_scatter/eurovisionworld_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
-    </div>
-    <div class="plot-container">
-        <iframe src="ogae_poll_and_tele_and_total_points_scatter/ogae_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
+        <iframe src="final_points_and_times_scatter.html" width="100%" height="100%"></iframe>
     </div>
     
+
+    <div class="plot-container">
+        <iframe src="running_order_in_final_and_points_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="countrys_debut_and_numer_of_participations.html" width="100%" height="100%"></iframe>
+    </div>
+   
+
+    <div class="plot-container">
+        <iframe src="running_order_in_semi_and_qualifications_column_histogram.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe src="qualified_and_nonqualified_numbers_scatter.html" width="100%" height="100%"></iframe>
+    </div>
+
+
+    <p>Menu:</p>
     <div>
         <label for="year-select">Select Year:</label>
         <select id="year-select">
             <option value="2022">2022</option>
             <option value="2021">2021</option>
-            <option value="2020">2020</option>
             <option value="2019">2019</option>
             <option value="2018">2018</option>
             <option value="2017">2017</option>
@@ -94,18 +99,33 @@
         <iframe id="final-points-plot" src="final_points_pie_year/final_points_pie_year_2022.html" width="100%" height="100%"></iframe>
     </div>
     <div class="plot-container">
-        <iframe src="qualified_and_nonqualified_numbers_scatter.html" width="100%" height="100%"></iframe>
+        <iframe id="july-tele-scatter" src="jury_and_tele_points_scatter/jury_and_tele_points_scatter_2022.html" width="100%" height="100%"></iframe>
     </div>
+
+
+    <div class="plot-container">
+        <iframe id="euroworld-scatter" src="eurovisionworld_poll_and_tele_and_total_points_scatter/eurovisionworld_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
+    </div>
+    <div class="plot-container">
+        <iframe id="ogae-scatter" src="ogae_poll_and_tele_and_total_points_scatter/ogae_poll_and_tele_and_total_points_scatter_2022.html" width="100%" height="100%"></iframe>
+    </div>
+    
 
     <div class="clear"></div> <!-- Clear the float after the last container -->
 
     <script>
-        const select_finalpoints_pie_year = document.getElementById("year-select");
+        const selec_year = document.getElementById("year-select");
         const finalpoints_pie_year = document.getElementById("final-points-plot");
+        const julytele_scatter = document.getElementById("july-tele-scatter");
+        const euroworld_scatter = document.getElementById("euroworld-scatter");
+        const ogae_scatter = document.getElementById("ogae-scatter");
 
-        select_finalpoints_pie_year.addEventListener("change", () => {
-            const selectedYear = select_finalpoints_pie_year.value;
+        selec_year.addEventListener("change", () => {
+            const selectedYear = selec_year.value;
             finalpoints_pie_year.src = `final_points_pie_year/final_points_pie_year_${selectedYear}.html`;
+            julytele_scatter.src = `jury_and_tele_points_scatter/jury_and_tele_points_scatter_${selectedYear}.html`;
+            euroworld_scatter.src = `eurovisionworld_poll_and_tele_and_total_points_scatter/eurovisionworld_poll_and_tele_and_total_points_scatter_${selectedYear}.html`;
+            ogae_scatter.src = `ogae_poll_and_tele_and_total_points_scatter/ogae_poll_and_tele_and_total_points_scatter_${selectedYear}.html`;
         });
     </script>
 
